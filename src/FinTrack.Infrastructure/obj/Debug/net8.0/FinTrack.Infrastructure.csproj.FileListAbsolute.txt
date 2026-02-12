@@ -1,0 +1,17 @@
+C:\dev\FinTrack\src\FinTrack.Infrastructure\bin\Debug\net8.0\FinTrack.Infrastructure.deps.json
+C:\dev\FinTrack\src\FinTrack.Infrastructure\bin\Debug\net8.0\FinTrack.Infrastructure.runtimeconfig.json
+C:\dev\FinTrack\src\FinTrack.Infrastructure\bin\Debug\net8.0\FinTrack.Infrastructure.dll
+C:\dev\FinTrack\src\FinTrack.Infrastructure\bin\Debug\net8.0\FinTrack.Infrastructure.pdb
+C:\dev\FinTrack\src\FinTrack.Infrastructure\bin\Debug\net8.0\FinTrack.Domain.dll
+C:\dev\FinTrack\src\FinTrack.Infrastructure\bin\Debug\net8.0\FinTrack.Domain.pdb
+C:\dev\FinTrack\src\FinTrack.Infrastructure\obj\Debug\net8.0\FinTrack.Infrastructure.csproj.AssemblyReference.cache
+C:\dev\FinTrack\src\FinTrack.Infrastructure\obj\Debug\net8.0\FinTrack.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\FinTrack\src\FinTrack.Infrastructure\obj\Debug\net8.0\FinTrack.Infrastructure.AssemblyInfoInputs.cache
+C:\dev\FinTrack\src\FinTrack.Infrastructure\obj\Debug\net8.0\FinTrack.Infrastructure.AssemblyInfo.cs
+C:\dev\FinTrack\src\FinTrack.Infrastructure\obj\Debug\net8.0\FinTrack.Infrastructure.csproj.CoreCompileInputs.cache
+C:\dev\FinTrack\src\FinTrack.Infrastructure\obj\Debug\net8.0\FinTrack.14CACC60.Up2Date
+C:\dev\FinTrack\src\FinTrack.Infrastructure\obj\Debug\net8.0\FinTrack.Infrastructure.dll
+C:\dev\FinTrack\src\FinTrack.Infrastructure\obj\Debug\net8.0\refint\FinTrack.Infrastructure.dll
+C:\dev\FinTrack\src\FinTrack.Infrastructure\obj\Debug\net8.0\FinTrack.Infrastructure.pdb
+C:\dev\FinTrack\src\FinTrack.Infrastructure\obj\Debug\net8.0\FinTrack.Infrastructure.genruntimeconfig.cache
+C:\dev\FinTrack\src\FinTrack.Infrastructure\obj\Debug\net8.0\ref\FinTrack.Infrastructure.dll
