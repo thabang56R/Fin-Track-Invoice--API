@@ -1,0 +1,70 @@
+
+
+services:
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: fintrack-sql
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "${SA_PASSWORD}"
+    ports:
+      - "1433:1433"
+    volumes:
+      - fintrack_sql_data:/var/opt/mssql
+    restart: unless-stopped
+    healthcheck:
+      test: [
+        "CMD-SHELL",
+        "/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P '${SA_PASSWORD}' -Q 'SELECT 1' || exit 1"
+      ]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  # ✅ Runs EF migrations once, then exits
+  migrator:
+    image: mcr.microsoft.com/dotnet/sdk:8.0
+    container_name: fintrack-migrator
+    depends_on:
+      db:
+        condition: service_healthy
+    working_dir: /src
+    volumes:
+      - ./:/src
+    environment:
+      ConnectionStrings__Sql: "Server=db,1433;Database=FinTrackDb;User Id=sa;Password=${SA_PASSWORD};TrustServerCertificate=True;Encrypt=False;"
+      Jwt__Issuer: "FinTrack"
+      Jwt__Audience: "FinTrack"
+      Jwt__Key: "${JWT_KEY}"
+    command: >
+      bash -lc "
+      dotnet restore &&
+      dotnet ef database update
+        --project src/FinTrack.Infrastructure
+        --startup-project src/FinTrack.Api
+        --context AppDbContext
+      "
+    restart: "no"
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fintrack-api
+    depends_on:
+      db:
+        condition: service_healthy
+      migrator:
+        condition: service_completed_successfully
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__Sql: "Server=db,1433;Database=FinTrackDb;User Id=sa;Password=${SA_PASSWORD};TrustServerCertificate=True;Encrypt=False;"
+      Jwt__Issuer: "FinTrack"
+      Jwt__Audience: "FinTrack"
+      Jwt__Key: "${JWT_KEY}"
+    ports:
+      - "5285:8080"
+    restart: unless-stopped
+
+volumes:
+  fintrack_sql_data:

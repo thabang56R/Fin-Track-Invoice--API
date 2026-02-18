@@ -7,6 +7,9 @@ using FinTrack.Infrastructure.Data;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using FinTrack.Api.Pdf;
+using QuestPDF.Fluent;
+
 
 namespace FinTrack.Api.Controllers;
 
@@ -105,7 +108,7 @@ public class InvoicesController : ControllerBase
             return Conflict("This invoice was updated by another request. Refresh and try again.");
         }
 
-        var paid = inv.Payments.Sum(p => p.Amount); // includes refunds (negative)
+        var paid = inv.Payments.Sum(p => p.Amount); 
         var outstanding = inv.Total - paid;
 
         return Ok(new
@@ -189,7 +192,7 @@ public class InvoicesController : ControllerBase
             PaidAtUtc = DateTime.UtcNow
         };
 
-        // ✅ only insert Payment (no invoice update)
+        
         _db.Payments.Add(payment);
         await _db.SaveChangesAsync();
 
@@ -239,7 +242,7 @@ public class InvoicesController : ControllerBase
         var reversal = new Payment
         {
             InvoiceId = inv.Id,
-            Amount = -original.Amount, // full reversal
+            Amount = -original.Amount, 
             Method = req.Method,
             Reference = req.Reference,
             Reason = req.Reason,
@@ -252,8 +255,8 @@ public class InvoicesController : ControllerBase
         _db.Payments.Add(reversal);
         await _db.SaveChangesAsync();
 
-        // recompute after reversal
-        var newPaid = paidSoFar + reversal.Amount; // reversal.Amount is negative
+        
+        var newPaid = paidSoFar + reversal.Amount; 
         var outstanding = inv.Total - newPaid;
         var displayStatus = ComputeDisplayStatus(inv.Status, inv.Total, newPaid);
 
@@ -292,7 +295,7 @@ public class InvoicesController : ControllerBase
         var refund = new Payment
         {
             InvoiceId = inv.Id,
-            Amount = -req.Amount, // negative
+            Amount = -req.Amount, 
             Method = req.Method,
             Reference = req.Reference,
             Reason = req.Reason,
@@ -318,6 +321,26 @@ public class InvoicesController : ControllerBase
             Outstanding = outstanding
         });
     }
+
+    [HttpGet("{id:guid}/pdf")]
+[Authorize(Roles = "Admin,Finance,Viewer")]
+public async Task<IActionResult> Pdf(Guid id)
+{
+    var inv = await _db.Invoices
+        .Include(i => i.Customer)
+        .Include(i => i.Items)
+        .Include(i => i.Payments)
+        .FirstOrDefaultAsync(i => i.Id == id);
+
+    if (inv is null) return NotFound();
+
+    var doc = new InvoicePdfDocument(inv, "FinTrack");
+    var bytes = doc.GeneratePdf();
+
+    var fileName = $"{inv.InvoiceNumber}.pdf";
+    return File(bytes, "application/pdf", fileName);
+}
+
 
     [HttpGet("{id:guid}")]
     public async Task<ActionResult> Get(Guid id)

@@ -15,3 +15,4 @@ C:\dev\FinTrack\src\FinTrack.Infrastructure\obj\Debug\net8.0\refint\FinTrack.Inf
 C:\dev\FinTrack\src\FinTrack.Infrastructure\obj\Debug\net8.0\FinTrack.Infrastructure.pdb
 C:\dev\FinTrack\src\FinTrack.Infrastructure\obj\Debug\net8.0\FinTrack.Infrastructure.genruntimeconfig.cache
 C:\dev\FinTrack\src\FinTrack.Infrastructure\obj\Debug\net8.0\ref\FinTrack.Infrastructure.dll
+C:\dev\FinTrack\src\FinTrack.Infrastructure\obj\Debug\net8.0\FinTrack.Infrastructure.sourcelink.json

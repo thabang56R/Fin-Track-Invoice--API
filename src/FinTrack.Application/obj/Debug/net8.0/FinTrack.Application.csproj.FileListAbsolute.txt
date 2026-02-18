@@ -9,3 +9,4 @@ C:\dev\FinTrack\src\FinTrack.Application\obj\Debug\net8.0\FinTrack.Application.d
 C:\dev\FinTrack\src\FinTrack.Application\obj\Debug\net8.0\refint\FinTrack.Application.dll
 C:\dev\FinTrack\src\FinTrack.Application\obj\Debug\net8.0\FinTrack.Application.pdb
 C:\dev\FinTrack\src\FinTrack.Application\obj\Debug\net8.0\ref\FinTrack.Application.dll
+C:\dev\FinTrack\src\FinTrack.Application\obj\Debug\net8.0\FinTrack.Application.sourcelink.json
