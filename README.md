@@ -211,13 +211,6 @@ Production-style error handling
 
 🔮 Possible Future Improvements
 
-Pagination & filtering
-
-Reporting endpoints
-
-Docker support
-
-CI/CD pipeline
 
 Integration testing
 
