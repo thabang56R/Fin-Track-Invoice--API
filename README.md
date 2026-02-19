@@ -1,8 +1,11 @@
 # Fin-Track-Invoice--API
 
-.
+.![CI](https://github.com/thabang56R/Fin-Track-Invoice--API/actions/workflows/ci.yml/badge.svg)
 
 🚀 FinTrack – Invoice & Payment Management API
+
+
+
 
 FinTrack is a production-style backend API built using ASP.NET Core 8 and Entity Framework Core.
 
@@ -208,13 +211,6 @@ Production-style error handling
 
 🔮 Possible Future Improvements
 
-Pagination & filtering
-
-Reporting endpoints
-
-Docker support
-
-CI/CD pipeline
 
 Integration testing
 
