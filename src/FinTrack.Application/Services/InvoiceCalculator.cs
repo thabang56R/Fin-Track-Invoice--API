@@ -2,7 +2,8 @@ namespace FinTrack.Application.Services;
 
 public static class InvoiceCalculator
 {
-    public static (decimal subtotal, decimal vatTotal, decimal total) Calculate(IEnumerable<(int qty, decimal unitPrice, decimal vatRate)> lines)
+    public static (decimal subtotal, decimal vatTotal, decimal total) Calculate(
+        IEnumerable<(int qty, decimal unitPrice, decimal vatRate)> lines)
     {
         decimal subtotal = 0, vat = 0;
 
@@ -17,3 +18,5 @@ public static class InvoiceCalculator
         return (subtotal, vat, subtotal + vat);
     }
 }
+
+
