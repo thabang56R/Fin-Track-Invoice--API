@@ -68,6 +68,26 @@ Implemented using an EF Core `SaveChangesInterceptor`.
 
 ---
 
+## 🧩 System Design Focus
+This project demonstrates  API design, and scalable backend development using modern technologies.
+
+Client Application
+
+        │
+        ▼
+        
+ASP.NET Core REST API
+
+        │
+        ▼
+        
+Authentication (JWT)
+
+        │
+        ▼
+        
+   SQL Database
+
 ## 🔐 Authentication & Roles
 
 Supported roles:
