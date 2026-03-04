@@ -5,7 +5,7 @@
 ![OpenAI](https://img.shields.io/badge/OpenAI-Embeddings_%2B_AI-black)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-🚀 # FinTrack – Invoice & Payment Management API
+## 🚀  FinTrack – Invoice & Payment Management API
 
 
 
