@@ -1,6 +1,9 @@
 
-
 .![CI](https://github.com/thabang56R/Fin-Track-Invoice--API/actions/workflows/ci.yml/badge.svg)
+![.NET](https://img.shields.io/badge/.NET-8.0-purple)
+![Docker](https://img.shields.io/badge/Docker-Ready-blue)
+![OpenAI](https://img.shields.io/badge/OpenAI-Embeddings_%2B_AI-black)
+![License](https://img.shields.io/badge/License-MIT-green)
 
 🚀 # FinTrack – Invoice & Payment Management API
 
