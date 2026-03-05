@@ -231,9 +231,10 @@ Example `appsettings.Development.json`:
     "Key": "CHANGE_THIS_TO_A_LONG_RANDOM_SECRET_32_CHARS_MINIMUM"
   }
 }
+
 ---
 
-Future improvements planned for the project include:
+## Future improvements planned for the project include:
 
 - Customer and vendor management
 - Invoice line items with tax and discount calculations
@@ -249,6 +250,7 @@ Future improvements planned for the project include:
 The goal of FinTrack is to demonstrate how to build secure, scalable, and maintainable backend services aligned with real-world financial system architecture.
 
 ---
+
 
 ## 👨‍💻 Author
 
