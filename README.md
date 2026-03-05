@@ -34,6 +34,8 @@ The system is designed to mimic real-world financial services APIs used by accou
 
 The long-term vision for FinTrack is to evolve into a full financial management backend platform capable of supporting modern invoicing and financial workflows for small businesses and SaaS applications.
 
+The goal of FinTrack is to demonstrate how to build secure, scalable, and maintainable backend services aligned with real-world financial system architecture.
+
 ---
 
 
@@ -246,12 +248,7 @@ Example `appsettings.Development.json`:
 - Background jobs for scheduled invoice reminders
 - Role-based access control for multi-user environments
 - Cloud deployment with CI/CD pipelines
-
-The goal of FinTrack is to demonstrate how to build secure, scalable, and maintainable backend services aligned with real-world financial system architecture.
-
 ---
-
-
 ## 👨‍💻 Author
 
 **Thabang Rakeng**  
