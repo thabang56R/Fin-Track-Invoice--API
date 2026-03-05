@@ -107,32 +107,111 @@ Implemented using an EF Core `SaveChangesInterceptor`.
 
 ---
 
-## 🧩 System Design Focus
-This project demonstrates  API design, and scalable backend development using modern technologies.
+## 🧩  System Architecture Focus
 
-Client Application
+The FinTrack API follows a layered backend architecture designed for maintainability and scalability.
 
-        │
-        ▼
-        
-ASP.NET Core REST API
+Client  Application 
 
-        │
-        ▼
-        
-Authentication (JWT)
+(Web / Mobile / Frontend)
 
-        │
-        ▼
-        
-   SQL Database
+
+⬇
+
+
+ASP.NET Core Web API  
+
+(Controllers, Business Logic)
+
+
+⬇
+
+Entity Framework Core  
+
+(Data Access Layer)
+
+
+⬇
+
+SQL Server Database  
+
+(Persistent Storage)
+
+
+⬇
+
+Authentication Layer  
+
+(JWT Security)
+
+
+⬇
+
+Monitoring & Documentation  
+
+(Swagger / OpenAPI)
+
+---
+
+## 📡 Example API Request
+
+Create Invoice
+
+POST /api/invoices
+
+Request Body:
+
+{
+
+  "customerName": "Acme 
+  Corporation",
+  
+  "amount": 2500,
+  
+  "dueDate": "2026-04-15",
+  
+  "status": "Pending"
+  
+}
+
+
+Response:
+
+
+{
+
+  "id": 12,
+  
+  "customerName": "Acme Corporation",
+  
+  "amount": 2500,
+  
+  "status": "Pending",
+  
+  "createdAt": "2026-03-01T10:25:00Z"
+  
+}
+---
+
+## 📚 API Documentation
+
+Once the API is running, interactive documentation is available via Swagger:
+
+
+http://localhost:5000/swagger
+
 
 ## 🔐 Authentication & Roles
 
+
 Supported roles:
+
 - `Admin`
+  
 - `Finance`
+  
 - `Viewer`
+  
 
 | Feature | Admin | Finance | Viewer |
 |--------|:-----:|:------:|:------:|
