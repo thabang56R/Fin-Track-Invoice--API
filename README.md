@@ -236,18 +236,28 @@ Example `appsettings.Development.json`:
 
 ---
 
-## Future improvements planned for the project include:
+Future improvements planned for the project include:
 
 - Customer and vendor management
+
 - Invoice line items with tax and discount calculations
+
 - Multi-currency support
+
 - Payment gateway integration (Stripe / PayFast)
+
 - Invoice PDF generation
+
 - Email notifications for invoice reminders
+
 - Financial reporting dashboards (revenue, outstanding invoices)
+
 - Background jobs for scheduled invoice reminders
+
 - Role-based access control for multi-user environments
+
 - Cloud deployment with CI/CD pipelines
+
 ---
 ## 👨‍💻 Author
 
