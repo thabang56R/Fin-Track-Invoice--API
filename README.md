@@ -38,7 +38,7 @@ The goal of FinTrack is to demonstrate how to build secure, scalable, and mainta
 
 ---
 
-Future improvements planned for the project include:
+## Future improvements planned for the project include:
 
 - Customer and vendor management
 
@@ -259,7 +259,13 @@ Example `appsettings.Development.json`:
 }
 
 
+
+
+
+---
+
 ## 👨‍💻 Author
 
 **Thabang Rakeng**  
 Full-Stack Developer | AI-Focused Backend Engineer   
+ 
