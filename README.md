@@ -246,7 +246,9 @@ Swagger includes an **Authorize** button for testing secured endpoints.
 ## 👨‍💻 Author
 
 **Thabang Rakeng**  
+
 Full-Stack Developer | AI-Focused Backend Engineer 
+
 ---
 
 ## ⚙️ Configuration
