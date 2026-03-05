@@ -34,20 +34,8 @@ The system is designed to mimic real-world financial services APIs used by accou
 
 The long-term vision for FinTrack is to evolve into a full financial management backend platform capable of supporting modern invoicing and financial workflows for small businesses and SaaS applications.
 
-Future improvements planned for the project include:
+---
 
-- Customer and vendor management
-- Invoice line items with tax and discount calculations
-- Multi-currency support
-- Payment gateway integration (Stripe / PayFast)
-- Invoice PDF generation
-- Email notifications for invoice reminders
-- Financial reporting dashboards (revenue, outstanding invoices)
-- Background jobs for scheduled invoice reminders
-- Role-based access control for multi-user environments
-- Cloud deployment with CI/CD pipelines
-
-The goal of FinTrack is to demonstrate how to build secure, scalable, and maintainable backend services aligned with real-world financial system architecture.
 
 ## 🚀 Features
 
@@ -76,6 +64,8 @@ The goal of FinTrack is to demonstrate how to build secure, scalable, and mainta
 - Supports partial refunds
 - Prevent refund > paid amount
 - Refund recorded as a negative payment
+
+---
 
 ### 🧾 Audit logging
 All create/update/delete operations are captured automatically:
@@ -241,3 +231,26 @@ Example `appsettings.Development.json`:
     "Key": "CHANGE_THIS_TO_A_LONG_RANDOM_SECRET_32_CHARS_MINIMUM"
   }
 }
+---
+
+Future improvements planned for the project include:
+
+- Customer and vendor management
+- Invoice line items with tax and discount calculations
+- Multi-currency support
+- Payment gateway integration (Stripe / PayFast)
+- Invoice PDF generation
+- Email notifications for invoice reminders
+- Financial reporting dashboards (revenue, outstanding invoices)
+- Background jobs for scheduled invoice reminders
+- Role-based access control for multi-user environments
+- Cloud deployment with CI/CD pipelines
+
+The goal of FinTrack is to demonstrate how to build secure, scalable, and maintainable backend services aligned with real-world financial system architecture.
+
+---
+
+## 👨‍💻 Author
+
+**Thabang Rakeng**  
+Full-Stack Developer | AI-Focused Backend Engineer   
