@@ -191,6 +191,7 @@ Response:
   "createdAt": "2026-03-01T10:25:00Z"
   
 }
+
 ---
 
 ## 📚 API Documentation
