@@ -234,7 +234,6 @@ Example `appsettings.Development.json`:
   }
 }
 
----
 
 Future improvements planned for the project include:
 
@@ -258,7 +257,7 @@ Future improvements planned for the project include:
 
 - Cloud deployment with CI/CD pipelines
 
----
+
 ## 👨‍💻 Author
 
 **Thabang Rakeng**  
